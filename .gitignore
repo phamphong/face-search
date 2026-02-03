@@ -1,0 +1,21 @@
+# Global
+**/.DS_Store
+**/.env
+**/.vscode
+**/__pycache__
+**/*.pyc
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Python
+backend/venv/
+backend/storage/
+*.egg-info/
+
+# Frontend
+frontend/dist/
+frontend/node_modules/
