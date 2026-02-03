@@ -10,23 +10,5 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
-  backend:
-    build: ./backend
-    ports:
-      - "8000:8000"
-    environment:
-      - DATABASE_URL=postgresql://${POSTGRES_USER:-postgres}:${POSTGRES_PASSWORD:-password}@db:5432/${POSTGRES_DB:-facesearch}
-    volumes:
-      - ./backend/storage:/app/storage
-    depends_on:
-      - db
-
-  frontend:
-    build: ./frontend
-    ports:
-      - "3000:80"
-    depends_on:
-      - backend
-
 volumes:
   postgres_data:
